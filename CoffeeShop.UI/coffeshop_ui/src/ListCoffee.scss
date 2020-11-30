@@ -1,0 +1,29 @@
+table {
+  border-collapse: collapse;
+  width: 100%;
+  th,
+  td {
+    text-align: center;
+    padding: 0;
+    .button {
+      border: none;
+      color: white;
+      padding: 15px 32px;
+      text-align: center;
+      text-decoration: none;
+      display: inline-block;
+      font-size: 16px;
+      margin: 4px 2px;
+      cursor: pointer;
+    }
+    .lc_btnEdit {
+      background-color: #008cba;
+    }
+    .lc_btnDelete {
+      background-color: #f44336;
+    }
+  }
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+}
