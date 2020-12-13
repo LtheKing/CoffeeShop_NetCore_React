@@ -4,7 +4,6 @@ import './App.scss';
 
 //components
 import ListCoffee from './components/ListCoffee';
-import ListCoffee2 from './components/ListCoffee2';
 import Home from './components/Home';
 import AddCoffe from './components/AddCoffee'
 import EditCoffee from './components/EditCoffee'
@@ -33,13 +32,16 @@ function App() {
               <li>
                 <Link to="/TestPage">Test Page</Link>
               </li>
+              <li className="menu_logout">
+                <Link to="/#">Logout</Link>
+              </li>
             </ul>
           </nav>
 
           <Switch>
             <Route path='/' exact component={Home} />
             <Route path='/AddCoffee' component={AddCoffe} />
-            <Route path='/ListCoffee' component={ListCoffee2} />
+            <Route path='/ListCoffee' component={ListCoffee} />
             <Route path='/EditCoffee/:id' component={EditCoffee} />
             <Route path='/TestPage' component={TestPage} />
           </Switch>

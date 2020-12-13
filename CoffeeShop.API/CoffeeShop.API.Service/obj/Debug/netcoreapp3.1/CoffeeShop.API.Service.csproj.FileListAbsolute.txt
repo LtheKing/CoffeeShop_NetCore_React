@@ -27,7 +27,6 @@ E:\aldi\learn\react\api_ui\CoffeeShop_API\CoffeeShop.API\CoffeeShop.API.Service\
 E:\aldi\learn\react\api_ui\CoffeeShop_API\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.csproj.CopyComplete
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\appsettings.Development.json
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\appsettings.json
-E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Properties\launchSettings.json
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\CoffeeShop.API.Service.exe
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\CoffeeShop.API.Service.deps.json
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\CoffeeShop.API.Service.runtimeconfig.json
@@ -52,3 +51,8 @@ E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.dll
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.pdb
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.genruntimeconfig.cache
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\scopedcss\bundle\CoffeeShop.API.Service.styles.css
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.JsonWebTokens.dll
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
