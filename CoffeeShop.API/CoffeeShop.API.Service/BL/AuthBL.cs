@@ -1,5 +1,7 @@
 using CoffeeShop.API.Service.DA;
 using CoffeeShop.API.Service.Model;
+using CoffeeShop.API.Service.Model.Requests;
+using CoffeeShop.API.Service.Model.Responses;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -28,6 +30,32 @@ namespace CoffeeShop.API.Service.BL
             }
 
             return result;
+        }
+
+        public GenericResponseModel<AuthResponseModel> AuthenticateUser(AuthRequestModel login)
+        {
+            var response = new GenericResponseModel<AuthResponseModel>();
+
+            try
+            {
+                var da = new AuthDA();
+                var resultLogin = da.Login(login);
+                if (!resultLogin)
+                {
+                    response.ErrorMessage = "User didn't Exists !";
+                    return response;
+                }
+
+                var msg = string.Empty;
+                response.Value = da.GetDataUser(login.UserName, ref msg);
+                response.Status = true;
+            }
+            catch (Exception ex)
+            {
+                response.ErrorMessage = ex.ToString();
+            }
+
+            return response;
         }
 
     }

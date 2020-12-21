@@ -41,6 +41,7 @@ namespace CoffeeShop.API.Service.Controllers
             {
                 user.token = GenerateJSONWebToken(user);
                 response.Value = user;
+                response.Status = true;
                 return Ok(response);
             }
 
@@ -50,17 +51,16 @@ namespace CoffeeShop.API.Service.Controllers
         private AuthResponseModel AuthenticateUser(AuthRequestModel login)
         {
             AuthResponseModel user = null;
+            var authBL = new AuthBL();
+            var authenticateResult = authBL.AuthenticateUser(login);
 
-            if (login.UserName == "admin")
+
+            if (!authenticateResult.Status)
             {
-                user = new AuthResponseModel {
-                    Name = "Leonaldi Nata Gunawan",
-                    EmailAddress = "leonalding77@gmail.com"
-                };
-
                 return user;
             }
 
+            user = authenticateResult.Value;
             return user;
         }
 
@@ -71,7 +71,7 @@ namespace CoffeeShop.API.Service.Controllers
 
             var claims = new[] {
                 new Claim(JwtRegisteredClaimNames.Sub, userInfo.Name),
-                new Claim(JwtRegisteredClaimNames.Email, userInfo.EmailAddress),
+                new Claim(JwtRegisteredClaimNames.Email, userInfo.Email),
                 new Claim(JwtRegisteredClaimNames.Jti, Guid.NewGuid().ToString())
             };
 
@@ -83,7 +83,5 @@ namespace CoffeeShop.API.Service.Controllers
 
             return new JwtSecurityTokenHandler().WriteToken(token);
         }
-
-
     }
 }
