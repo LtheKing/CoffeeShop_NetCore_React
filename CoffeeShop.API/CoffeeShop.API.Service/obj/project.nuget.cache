@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bwkfHNcXYtv+A5X3sGSqjTFP6uJFYq7+QkIZfn1403ilVcGvjmpshrhx+JOgtNhxmhR0OO73VR8Kq3G989mOwQ==",
+  "dgSpecHash": "YH/iOJcCihWjBEoXDS31BcY1rl+wVGJ3PG207zrd1X6/kH6UKo9k5GIBKqlDAOb1XG5ewa1VTJp19vMvZ/7Buw==",
   "success": true,
   "projectFilePath": "E:\\aldi\\learn\\javascript\\react\\api_ui\\CoffeeShop.API\\CoffeeShop.API.Service\\CoffeeShop.API.Service.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\MKI\\.nuget\\packages\\microsoft.aspnetcore.authentication.certificate\\3.1.10\\microsoft.aspnetcore.authentication.certificate.3.1.10.nupkg.sha512",
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
     "C:\\Users\\MKI\\.nuget\\packages\\microsoft.identitymodel.jsonwebtokens\\6.8.0\\microsoft.identitymodel.jsonwebtokens.6.8.0.nupkg.sha512",
     "C:\\Users\\MKI\\.nuget\\packages\\microsoft.identitymodel.logging\\6.8.0\\microsoft.identitymodel.logging.6.8.0.nupkg.sha512",

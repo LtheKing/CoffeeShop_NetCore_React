@@ -37,6 +37,10 @@ namespace CoffeeShop.API.Service
                     .AllowCredentials()
                 );
             });
+
+            // services.AddAuthentication(
+            //     Certificate
+            // ).AddCertificate();
             services.AddControllers();
         }
 

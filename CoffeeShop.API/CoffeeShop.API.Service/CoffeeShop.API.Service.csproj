@@ -4,7 +4,8 @@
     <UserSecretsId>041ba6fc-4de5-4a0e-9fa5-444067785886</UserSecretsId>
   </PropertyGroup>
   <ItemGroup>
-    <PackageReference Include="System.Data.SqlClient" Version="4.8.2" />
-    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.2"/>
+    <PackageReference Include="System.IdentityModel.Tokens.Jwt" Version="6.8.0"/>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Certificate" Version="3.1.10"/>
   </ItemGroup>
 </Project>

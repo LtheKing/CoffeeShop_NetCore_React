@@ -39,7 +39,6 @@ E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
-E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.csprojAssemblyReference.cache
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.AssemblyInfoInputs.cache
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.AssemblyInfo.cs
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.csproj.CoreCompileInputs.cache
@@ -56,3 +55,5 @@ E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Logging.dll
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Microsoft.IdentityModel.Tokens.dll
 E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\System.IdentityModel.Tokens.Jwt.dll
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Authentication.Certificate.dll
+E:\aldi\learn\javascript\react\api_ui\CoffeeShop.API\CoffeeShop.API.Service\obj\Debug\netcoreapp3.1\CoffeeShop.API.Service.csprojAssemblyReference.cache
