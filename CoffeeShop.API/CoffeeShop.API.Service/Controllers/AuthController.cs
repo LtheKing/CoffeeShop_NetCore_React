@@ -30,8 +30,8 @@ namespace CoffeeShop.API.Service.Controllers
             _configuration = configuration;
         }
 
+        [HttpPost("Login")]
         [AllowAnonymous]
-        [HttpPost]
         public IActionResult Login([FromBody] AuthRequestModel login)
         {
             var response = new GenericResponseModel<AuthResponseModel>();
@@ -53,7 +53,6 @@ namespace CoffeeShop.API.Service.Controllers
             AuthResponseModel user = null;
             var authBL = new AuthBL();
             var authenticateResult = authBL.AuthenticateUser(login);
-
 
             if (!authenticateResult.Status)
             {
@@ -82,6 +81,13 @@ namespace CoffeeShop.API.Service.Controllers
                 signingCredentials: credentials);
 
             return new JwtSecurityTokenHandler().WriteToken(token);
+        }
+
+        [HttpGet("TestAuth")]
+        [AllowAnonymous]
+        public IActionResult TestAuthApi() 
+        {
+            return Ok("auth succeed");
         }
     }
 }

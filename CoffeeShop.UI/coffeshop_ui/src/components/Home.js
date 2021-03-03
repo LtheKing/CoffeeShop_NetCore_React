@@ -24,12 +24,24 @@ const Home = () => {
         })
     }
 
-    const onSubmit = (e) => {
+    async function onSubmit(e) {
         e.preventDefault();
-        console.log(user);
-        // setUser({
+        var dataAuth = {
+            UserName : user.username,
+            Password : user.password,
+            ConfirmPassword : user.password
+        };
+        
+        const coffee = await fetch("https://localhost:5001/api/Auth/Login", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json"
+            },
+            body: JSON.stringify(dataAuth)
+        });
 
-        // });
+        const toJSON = await coffee.json();
+        localStorage.setItem('token', toJSON.value.token);
     }
 
     return (
