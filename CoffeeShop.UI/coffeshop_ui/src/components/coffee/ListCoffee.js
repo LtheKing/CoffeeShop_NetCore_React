@@ -8,8 +8,8 @@ import {
     Button
 } from "reactstrap";
 //context
-import CoffeeContext from "../context/CoffeeContext"
-import '../ListCoffee.scss';
+import CoffeeContext from "../../context/CoffeeContext"
+import '../../ListCoffee.scss';
 
 const CoffeeList = () => {
     const { getCoffee, coffees, editCoffee, deleteCoffee, loading } = useContext(CoffeeContext);

@@ -1,7 +1,7 @@
 import React, { Component, useContext, useReducer, useState } from 'react';
 import { Link, useHistory } from "react-router-dom"
 import axios from 'axios';
-import CoffeeContext from "../context/CoffeeContext"
+import CoffeeContext from "../../context/CoffeeContext"
 
 const AddCoffe = () => {
     const { insertCoffee, coffees } = useContext(CoffeeContext);

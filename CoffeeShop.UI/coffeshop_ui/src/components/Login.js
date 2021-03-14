@@ -1,12 +1,24 @@
-import React, { Component, useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { Component, useState, useEffect } from 'react';
+import { Link, useHistory, Redirect } from 'react-router-dom';
+import App from "../App";
 
-const Home = () => {
-
+function Login() {
+    const history = useHistory();
     const [user, setUser] = useState({
         username: '',
         password: ''
     });
+
+    const [auth, setAuth] = useState({
+       token: '',
+       refreshToken: '' 
+    });
+
+    useEffect(() => {
+        if (auth.token.length > 0) {
+            console.log(auth);
+        }
+    }, [auth])
 
     const UsernameOnChange = (e) => {
         e.preventDefault();
@@ -24,7 +36,7 @@ const Home = () => {
         })
     }
 
-    async function onSubmit(e) {
+    async function onLoginClick(e) {
         e.preventDefault();
         var dataAuth = {
             UserName : user.username,
@@ -41,7 +53,13 @@ const Home = () => {
         });
 
         const toJSON = await coffee.json();
-        localStorage.setItem('token', toJSON.value.token);
+        // localStorage.setItem('token', toJSON.value.token);
+        setAuth({
+            token: toJSON.value.token,
+            refreshToken: 'this is refresh token'
+        });
+
+        history.push("/ListCoffee");
     }
 
     return (
@@ -50,7 +68,7 @@ const Home = () => {
             <h2>Silahkan Login Terlebih Dahulu</h2>
 
             <div className="div_login">
-                <form action="" method="post" onSubmit={onSubmit}>
+                <form action="" method="post" onSubmit={onLoginClick}>
                     <div className="row">
                         <div className="col-25">
                             <label htmlFor="lbl_username">Username</label>
@@ -78,4 +96,4 @@ const Home = () => {
     );
 }
 
-export default Home;
+export default Login;
