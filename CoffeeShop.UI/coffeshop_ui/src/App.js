@@ -8,24 +8,24 @@ import Home from './components/coffee/Home';
 import AddCoffe from './components/coffee/AddCoffee'
 import EditCoffee from './components/coffee/EditCoffee'
 import Login from './components/Login'
+import CoffeeArranger from './components/coffee/CoffeeArranger'
 
 //context
 import CoffeeState from './context/CoffeeState';
-import TestPage from './components/TestPage';
 
 function App() {
   return (
 
     <CoffeeState>
       <Router>
-          <Switch>
-            <Route path='/' exact component={Login} />
-            <Route path='/Home'  component={Home} />
-            <Route path='/AddCoffee' component={AddCoffe} />
-            <Route path='/ListCoffee' component={ListCoffee} />
-            <Route path='/EditCoffee/:id' component={EditCoffee} />
-            <Route path='/TestPage' component={TestPage} />
-          </Switch>
+        <Switch>
+          <Route path='/' exact component={Login} />
+          <Route path='/Home' component={Home} />
+          <Route path='/AddCoffee' component={AddCoffe} />
+          <Route path='/ListCoffee' component={ListCoffee} />
+          <Route path='/CoffeeArranger' component={CoffeeArranger} />
+          <Route path='/EditCoffee/:id' component={EditCoffee} />
+        </Switch>
       </Router>
     </CoffeeState>
 

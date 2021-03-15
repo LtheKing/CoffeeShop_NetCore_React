@@ -1,6 +1,7 @@
 import React, { Component, useState, useEffect } from 'react';
 import { Link, useHistory, Redirect } from 'react-router-dom';
-import App from "../App";
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
 
 function Login() {
     const history = useHistory();
@@ -16,7 +17,11 @@ function Login() {
 
     useEffect(() => {
         if (auth.token.length > 0) {
-            console.log(auth);
+            history.push({
+                pathname: "/CoffeeArranger",
+                state: auth
+            });
+            alertify.success('success logged in');
         }
     }, [auth])
 
@@ -44,22 +49,32 @@ function Login() {
             ConfirmPassword : user.password
         };
         
-        const coffee = await fetch("https://localhost:5001/api/Auth/Login", {
-            method: "POST",
+        const options = {
+            method: 'post',
             headers: {
-                "Content-Type": "application/json"
+                'Accept': 'application/json, text/plain, */*',
+                'Content-Type': 'application/json'
             },
             body: JSON.stringify(dataAuth)
-        });
+        }
 
-        const toJSON = await coffee.json();
-        // localStorage.setItem('token', toJSON.value.token);
-        setAuth({
-            token: toJSON.value.token,
-            refreshToken: 'this is refresh token'
-        });
-
-        history.push("/ListCoffee");
+        await fetch("https://localhost:5001/api/Auth/Login", options)
+            .then(res => res.json())
+            .then(res => {
+                if (!res.status) {
+                    throw new Error(res.errorMessage);
+                }
+                return res;
+            }).then(toJSON => {
+                setAuth({
+                    token: toJSON.value.token,
+                    refreshToken: 'this is refresh token'
+                });
+            })
+            .catch(err => {
+                console.log(err);
+                alertify.error('login failed');
+            });      
     }
 
     return (

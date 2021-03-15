@@ -45,6 +45,7 @@ namespace CoffeeShop.API.Service.Controllers
                 return Ok(response);
             }
 
+            response.ErrorMessage = "User Not Found";
             return Unauthorized(response);
         }
 
