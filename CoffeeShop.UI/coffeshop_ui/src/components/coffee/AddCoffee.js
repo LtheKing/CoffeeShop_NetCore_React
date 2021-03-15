@@ -2,6 +2,8 @@ import React, { Component, useContext, useReducer, useState } from 'react';
 import { Link, useHistory } from "react-router-dom"
 import axios from 'axios';
 import CoffeeContext from "../../context/CoffeeContext"
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
 
 const AddCoffe = () => {
     const { insertCoffee, coffees } = useContext(CoffeeContext);
@@ -40,18 +42,24 @@ const AddCoffe = () => {
     }
 
     return (
-        <div>
+        <div className="container_form add_coffee_form">
             <h1 align="center">diss is insert page</h1>
 
             <form action="" method="" align="center" onSubmit={onSubmit}>
-                <label htmlFor="">Name</label>
-                <input type="text" name="Name" id="input_name" onChange={nameOnChange} />
+                <div>
+                    <label htmlFor="Name">Name :</label>
+                    <input type="text" name="Name" id="input_name" onChange={nameOnChange} />
+                </div>
 
-                <label htmlFor="">Price</label>
-                <input type="number" name="Price" id="input_price" onChange={priceOnChange} />
+                <div>
+                    <label htmlFor="">Price :</label>
+                    <input type="number" name="Price" id="input_price" onChange={priceOnChange} />
+                </div>
 
-                <label htmlFor="">Size</label>
-                <input type="text" name="Size" id="input_size" onChange={sizeOnChange} />
+                <div>
+                    <label htmlFor="">Size :</label>
+                    <input type="text" name="Size" id="input_size" onChange={sizeOnChange} />
+                </div>
 
                 <input type="submit" value="Submit" />
             </form>

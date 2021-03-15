@@ -98,7 +98,7 @@ function Login() {
                             <label htmlFor="lbl_password">Password</label>
                         </div>
                         <div className="col-75">
-                            <input type="text" name="password" id="" onChange={PasswordOnChange}/>
+                            <input type="password" name="password" id="" onChange={PasswordOnChange}/>
                         </div>
                     </div>
 
