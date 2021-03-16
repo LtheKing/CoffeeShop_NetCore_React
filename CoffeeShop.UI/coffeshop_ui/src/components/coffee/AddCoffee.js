@@ -38,6 +38,7 @@ const AddCoffe = () => {
     const onSubmit = (e) => {
         e.preventDefault();
         insertCoffee(coffee);
+        alertify.success('new Coffee added');
         history.push('/ListCoffee');
     }
 

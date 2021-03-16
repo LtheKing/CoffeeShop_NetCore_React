@@ -1,10 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using CoffeeShop.API.Service.BL;
 using CoffeeShop.API.Service.Model;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -17,7 +19,7 @@ namespace CoffeeShop.API.Service.Controllers
     {
         private readonly IConfiguration _configuration;
 
-        public CoffeeController(IConfiguration configuration)
+        public CoffeeController(IConfiguration configuration, IWebHostEnvironment hostEnvironment)
         {
             _configuration = configuration;
         }
@@ -43,7 +45,8 @@ namespace CoffeeShop.API.Service.Controllers
         }
 
         [HttpPost]
-        public IActionResult Insert([FromBody] CoffeeModel cm) {
+        public IActionResult Insert([FromForm] CoffeeModel cm) 
+        {
             var response = new GenericResponseModel<string>();
             var bl = new CoffeeBL();
             response = bl.InsertCoffee(cm);

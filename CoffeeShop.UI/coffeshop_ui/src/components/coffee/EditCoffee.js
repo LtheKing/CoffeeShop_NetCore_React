@@ -1,13 +1,8 @@
 import React, { useEffect, useContext, useState } from 'react'
 import CoffeeContext from "../../context/CoffeeContext"
 import { Link, useHistory } from "react-router-dom"
-import {
-    Form,
-    FormGroup,
-    Label,
-    Input,
-    Button
-} from "reactstrap";
+import alertify from 'alertifyjs';
+import 'alertifyjs/build/css/alertify.css';
 
 const EditCoffee = (props) => {
 
@@ -42,27 +37,26 @@ const EditCoffee = (props) => {
     const onSubmit = (e) => {
         e.preventDefault();
         updateCoffee(selectedCoffee);
+        alertify.success('Coffee Edited');
         history.push("/ListCoffee")
     }
 
     return (
-        <div>
+        <div className="container_form add_coffee_form">
             <h1>this is edit page</h1>
-            <Form onSubmit={onSubmit} align="center">
-                <FormGroup>
-                    <Label>Name</Label>
-                    <Input type="text" value={selectedCoffee.name} onChange={onChange} name="name" placeholder="Enter Coffee Name" required></Input>
+            <form onSubmit={onSubmit} align="center">
+                    <label>Name</label>
+                    <input type="text" value={selectedCoffee.name} onChange={onChange} name="name" placeholder="Enter Coffee Name" required></input>
 
-                    <Label>Size</Label>
-                    <Input type="text" value={selectedCoffee.size} onChange={onChange} name="size" placeholder="Size" required></Input>
+                    <label>Size</label>
+                    <input type="text" value={selectedCoffee.size} onChange={onChange} name="size" placeholder="Size" required></input>
 
-                    <Label>Price</Label>
-                    <Input type="number" value={selectedCoffee.price} onChange={onChange} name="price" placeholder="Price" required></Input>
+                    <label>Price</label>
+                    <input type="number" value={selectedCoffee.price} onChange={onChange} name="price" placeholder="Price" required></input>
 
-                </FormGroup>
-                <Button type="submit">Edit Coffee</Button>
-                <Button className="btn btn-danger ml-2"><Link to="/">Cancel</Link></Button>
-            </Form>
+                <input type="submit" id="editCoffee_submitBtn" value="Submit"/>
+                <button className="editCoffee_cancelBtn"><Link to="/ListCoffee">Cancel</Link></button>
+            </form>
         </div>
     )
 }

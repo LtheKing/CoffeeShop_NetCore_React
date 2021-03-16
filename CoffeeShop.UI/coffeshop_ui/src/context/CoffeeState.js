@@ -1,5 +1,4 @@
 import React, { useReducer } from "react";
-import axios from "axios";
 
 //context
 import CoffeeContext from "./CoffeeContext"
@@ -13,7 +12,6 @@ import {
     CREATE_COFFEE,
     UPDATE_COFFEE,
     DELETE_COFFEE,
-    EDIT_COFFEE,
     GET_BY_ID
 } from "./CoffeeTypes"
 
@@ -88,9 +86,8 @@ const CoffeeState = ({ children }) => {
     }
 
     const deleteCoffee = async (id) => {
-        var a = id.toString();
         try {
-            const coffee = await fetch(`https://localhost:5001/api/Coffee/DeleteCoffee/${id}`, {
+            await fetch(`https://localhost:5001/api/Coffee/DeleteCoffee/${id}`, {
                 method: "DELETE"
             });
 

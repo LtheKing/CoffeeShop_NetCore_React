@@ -4,7 +4,6 @@ import  {
     UPDATE_COFFEE,
     CREATE_COFFEE,
     DELETE_COFFEE,
-    EDIT_COFFEE,
     GET_BY_ID
 } from "./CoffeeTypes"
 
