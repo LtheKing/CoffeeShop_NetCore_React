@@ -4,6 +4,8 @@ import axios from 'axios';
 import CoffeeContext from "../../context/CoffeeContext"
 import alertify from 'alertifyjs';
 import 'alertifyjs/build/css/alertify.css';
+import CoffeeArranger from './CoffeeArranger';
+import '../../style/Form.scss'
 
 const AddCoffe = () => {
     const { insertCoffee, coffees } = useContext(CoffeeContext);
@@ -43,6 +45,7 @@ const AddCoffe = () => {
     }
 
     return (
+        <CoffeeArranger>
         <div className="container_form add_coffee_form">
             <h1 align="center">diss is insert page</h1>
 
@@ -65,6 +68,7 @@ const AddCoffe = () => {
                 <input type="submit" value="Submit" />
             </form>
         </div>
+        </CoffeeArranger>
     );
 }
 

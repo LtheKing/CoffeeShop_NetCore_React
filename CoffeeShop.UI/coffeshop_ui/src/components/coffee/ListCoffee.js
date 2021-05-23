@@ -10,6 +10,7 @@ import {
 //context
 import CoffeeContext from "../../context/CoffeeContext"
 import '../../ListCoffee.scss';
+import CoffeeArranger from "./CoffeeArranger";
 
 const CoffeeList = () => {
     const { getCoffee, coffees, editCoffee, deleteCoffee, loading } = useContext(CoffeeContext);
@@ -22,6 +23,7 @@ const CoffeeList = () => {
     }
 
     return (
+        <CoffeeArranger>
         <div className="App">
             <h1>Coffee List</h1>
 
@@ -41,10 +43,6 @@ const CoffeeList = () => {
                             <td key={item.price}>{item.price}</td>
                             <td key={item.size}>{item.size}</td>
                             <td className="td_buttons">
-                                {/* <Link to={`/EditCoffee/${item.id}`} color="warning" className="btn btn-warning mr-1">
-                                    <Button>Edit</Button>
-                                </Link> */}
-
                                 <a className="lc_btnEdit" href={`/EditCoffee/${item.id}`}>Edit</a> &nbsp;
                                 <Button className="lc_btnDelete" onClick={() => deleteCoffee(item.id)}>Delete</Button>
                             </td>
@@ -56,6 +54,7 @@ const CoffeeList = () => {
 
             <a href="/AddCoffee">More Coffee ?</a>
         </div>
+        </CoffeeArranger>
     )
 }
 

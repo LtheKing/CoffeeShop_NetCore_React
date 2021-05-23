@@ -2,6 +2,8 @@ import React, { Component, useState, useEffect } from 'react';
 import { Link, useHistory, Redirect } from 'react-router-dom';
 import alertify from 'alertifyjs';
 import 'alertifyjs/build/css/alertify.css';
+import '../style/Login.scss'
+
 
 function Login() {
     const history = useHistory();
@@ -11,8 +13,8 @@ function Login() {
     });
 
     const [auth, setAuth] = useState({
-       token: '',
-       refreshToken: '' 
+        token: '',
+        refreshToken: ''
     });
 
     useEffect(() => {
@@ -44,11 +46,11 @@ function Login() {
     async function onLoginClick(e) {
         e.preventDefault();
         var dataAuth = {
-            UserName : user.username,
-            Password : user.password,
-            ConfirmPassword : user.password
+            UserName: user.username,
+            Password: user.password,
+            ConfirmPassword: user.password
         };
-        
+
         const options = {
             method: 'post',
             headers: {
@@ -74,39 +76,36 @@ function Login() {
             .catch(err => {
                 console.log(err);
                 alertify.error('login failed');
-            });      
+            });
     }
 
     return (
         <div className="container_home">
-            <h1>Welcome to Coffee Shop Web App</h1>
-            <h2>Silahkan Login Terlebih Dahulu</h2>
+                <div className="div_login">
+                    <form action="" method="post" onSubmit={onLoginClick}>
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="lbl_username">Username</label>
+                            </div>
+                            <div className="col-75">
+                                <input type="text" name="username" id="" onChange={UsernameOnChange} />
+                            </div>
+                        </div>
 
-            <div className="div_login">
-                <form action="" method="post" onSubmit={onLoginClick}>
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="lbl_username">Username</label>
+                        <div className="row">
+                            <div className="col-25">
+                                <label htmlFor="lbl_password">Password</label>
+                            </div>
+                            <div className="col-75">
+                                <input type="password" name="password" id="" onChange={PasswordOnChange} />
+                            </div>
                         </div>
-                        <div className="col-75">
-                            <input type="text" name="username" id="" onChange={UsernameOnChange} />
-                        </div>
-                    </div>
 
-                    <div className="row">
-                        <div className="col-25">
-                            <label htmlFor="lbl_password">Password</label>
+                        <div className="row">
+                            <button type="submit">Login</button>
                         </div>
-                        <div className="col-75">
-                            <input type="password" name="password" id="" onChange={PasswordOnChange}/>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <button type="submit">Login</button>
-                    </div>
-                </form>
-            </div>
+                    </form>
+                </div>
         </div>
     );
 }

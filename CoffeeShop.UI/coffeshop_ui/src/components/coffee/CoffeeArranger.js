@@ -3,13 +3,12 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 import '../../App.scss';
 
 function CoffeeArranger(props) {
-    console.log(props);
     return (
         <div>
             <nav>
                 <ul>
                     <li>
-                        <Link to="/">Home</Link>
+                        <Link to="/Home">Home</Link>
                     </li>
                     <li>
                         <Link to="/AddCoffee">More Coffee</Link>
@@ -22,6 +21,8 @@ function CoffeeArranger(props) {
                     </li>
                 </ul>
             </nav>
+
+            {props.children}
         </div>
     );
 }

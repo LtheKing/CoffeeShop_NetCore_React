@@ -1,9 +1,11 @@
 import React from 'react';
+import CoffeeArranger from './CoffeeArranger';
+// import '../../style/Home.scss'
 
 export default function Home() {
-    return(
-        <div>
-            <h1>Welcome to Coffee Shop</h1>
-        </div>
+    return (
+        <CoffeeArranger>
+            
+        </CoffeeArranger>
     );
 }
